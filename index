@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+    <meta name="description" content="website">
+	  <meta name="keywords" content="Informatica website">
+  	<meta name="author" content="Tijn Mestrom">
+    <title>HBO-ICT website | Welkom</title>
+	<link rel="stylesheet" href="./css/style.css">
+	<style type="text/css" media= "screen">
+body {
+  font: 15px/1.5 Arial, Helvetica, sans-serif;
+  padding: 0;
+  margin: 0;
+  background-color: #f4f4f4;
+}
+
+/* Global */
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.button_1 {
+  height: 37px;
+  padding: 0 2px;
+  border: 0;
+
+  background: #2c82e6;
+  color: #ffffff;
+}
+
+.dark {
+  padding: 15px;
+  background: #35424a;
+  color: #ffffff;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* Header **/
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: max(10px, 2vh) 5vw;
+  border-bottom: #2c82e6 3px solid;
+
+  background: #35424a;
+  color: #ffffff;
+}
+
+header h1 {
+  margin: 0;
+}
+
+header a {
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+header li {
+  display: inline;
+  padding: 0 20px;
+}
+
+header .rightWrap {
+  display: flex;
+  gap: 2rem;
+}
+
+.menuWithText {
+  display: flex;
+}
+
+.menuWithText > div {
+  font-size: 30px;
+  cursor: pointer;
+}
+
+header nav {
+}
+
+header .highlight,
+header .current a {
+  color: #2c82e6;
+  font-weight: bold;
+}
+
+header a:hover {
+  color: #cccccc;
+  font-weight: bold;
+}
+
+main {
+  display: flex;
+  flex-flow: column;
+}
+
+/* Showcase */
+#showcase {
+  display: grid;
+  place-items: center;
+  grid-gap: 1rem;
+  width: 100%;
+  flex: 1;
+  color: white;
+  text-align: center;
+  background-image: url("https://i.imgur.com/ZkpC5e0.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+#showcase h1 {
+  font-size: 55px;
+  margin: 0;
+}
+
+#showcase p {
+  font-size: 20px;
+}
+
+/* Newsletter */
+#newsletter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 1rem 5vw 1.25rem;
+  border-top: #2c82e6 3px solid;
+
+  color: #ffffff;
+  background: #35424a;
+
+  min-height: 70px;
+}
+
+#newsletter h3 {
+  font-size: 1.5em;
+  margin: 0;
+}
+
+#newsletter input[type="email"] {
+  padding: 4px;
+  height: 25px;
+  width: 250px;
+}
+
+/* Boxes */
+#boxes {
+  margin-top: 20px;
+}
+
+#boxes .box {
+  float: left;
+  text-align: center;
+  width: 30%;
+  padding: 10px;
+}
+
+#boxes .box img {
+  width: 90px;
+}
+
+/* Sidebar */
+aside#sidebar {
+  float: right;
+  width: 30%;
+  margin-top: 10px;
+}
+
+aside#sidebar .quote input,
+aside#sidebar .quote textarea {
+  width: 90%;
+  padding: 5px;
+}
+
+/* Main-col */
+article#main-col {
+  float: left;
+  width: 65%;
+}
+
+/* Services */
+ul#services li {
+  list-style: none;
+  padding: 20px;
+  border: #cccccc solid 1px;
+  margin-bottom: 5px;
+  background: #e6e6e6;
+}
+
+footer {
+  padding: 30px;
+  margin-top: 0px;
+  color: #ffffff;
+  background-color: #2c82e6;
+  text-align: center;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  header #branding,
+  header nav,
+  header nav li,
+  #newsletter h1,
+  #newsletter form,
+  #boxes .box,
+  article#main-col,
+  aside#sidebar {
+    float: none;
+    text-align: center;
+    width: 100%;
+  }
+
+  header {
+    padding-bottom: 20px;
+  }
+
+  #showcase h1 {
+    margin-top: 40px;
+	
+  }
+
+  #newsletter button,
+  .quote button {
+    display: block;
+    width: 100%;
+  }
+
+  #newsletter form input[type="email"],
+  .quote input,
+  .quote textarea {
+    width: 100%;
+    margin-bottom: 5px;
+	
+  }
+
+  /* htmltables */
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  td,
+  th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+}
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+body.pancake {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: Block;
+  transition: 0.3s;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+  color: #2c82e6;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {
+    font-size: 20px;
+  }
+
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: Block;
+  transition: 0.3s;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+  color: #2c82e6;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {
+    font-size: 20px;
+  }
+
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+</style>
+  </head>
+  
+
+<body class="pancake">
+  <header>
+    <div class="rightWrap">
+      <div class="menuWithText">
+        <div onclick="openNav()">☰ Menu</div>
+      </div>
+      <h1 class="branding"><span class="highlight">HBO-ICT</span> Website</h1>
+    </div>
+    <div id="myNav" class="overlay">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+      <div class="overlay-content">
+        <a href="index.html">Home</a>
+      </div>
+    </div>
+<script>
+function openNav() {
+  document.getElementById("myNav").style.width = "100%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
+</script>
+    <nav>
+      <ul>
+        <li class="current"><a href="index.html">Home</a></li>
+      </ul>
+    </nav>
+
+  </header>
+  <main>
+    <section id="showcase">
+      <div class="container">
+        <h1>HBO-ICT</h1>
+        <p>Welkom bij mijn website deze website is gemaakt voor het vak Introduction to Infrastructure.</p>
+      </div>
+    </section>
+
+    <section id="newsletter">
+      <h3>Abonneer op onze nieuwsbrief</h3>
+      <form>
+        <input type="email" placeholder="Enter Email...">
+        <button type="submit" class="button_1">Abonneer</button>
+      </form>
+      </div>
+    </section>
+  </main>
+  <footer>
+    Copyright © 2022/2023 Tijn Mestrom | Leerling ZUYD Hogeschool
+  </footer>
+</body>
+</html>
